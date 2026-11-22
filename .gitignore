@@ -4,6 +4,9 @@ WORKLOG.md
 # 확인 실행 결과 - 본 측정이 아님
 frostlab_results/_smoketest/
 
+# 측정 조건을 지키지 못해 실험에 쓰지 않는 결과 - 기록용으로만 보관
+frostlab_results/_dryrun/
+
 # 파이썬 임시 파일
 __pycache__/
 *.pyc
