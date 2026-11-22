@@ -1,0 +1,4 @@
+﻿gpu,mode,prompt_idx,seed,batch,total_sec,sec_per_image,sampling_its,peak_vram_mb,peak_power_w,peak_temp_c,status,error,timestamp
+3070x,batch,0,1001,16,21.906,1.369,1.096,6254.0,217.49,59.75,ok,,2026-11-17T19:26:49
+3070x,batch,0,1001,32,45.591,1.425,0.491,5862.0,215.72,63.09,ok,,2026-11-17T19:27:35
+3070x,batch,0,1001,64,88.703,1.386,0.256,7867.0,219.68,66.44,ok,,2026-11-17T19:29:03

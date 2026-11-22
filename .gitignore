@@ -1,0 +1,12 @@
+# 내부 작업 메모 (대외비) - 저장소에 올리지 않는다
+WORKLOG.md
+
+# 확인 실행 결과 - 본 측정이 아님
+frostlab_results/_smoketest/
+
+# 파이썬 임시 파일
+__pycache__/
+*.pyc
+
+# 블로그 업로드용 이미지 - 개인 사진이 섞여 있어 공개하지 않는다
+blog_images/

@@ -1,0 +1,4 @@
+﻿gpu,mode,prompt_idx,seed,batch,total_sec,sec_per_image,sampling_its,peak_vram_mb,peak_power_w,peak_temp_c,status,error,timestamp
+5070tix,batch,0,1001,16,10.649,0.666,2.346,12395.0,301.93,67.36,ok,,2026-11-18T21:05:16
+5070tix,batch,0,1001,32,20.552,0.642,1.166,12171.0,302.78,69.18,ok,,2026-11-18T21:05:37
+5070tix,batch,0,1001,64,40.216,0.628,0.576,12165.0,303.47,71.58,ok,,2026-11-18T21:06:17

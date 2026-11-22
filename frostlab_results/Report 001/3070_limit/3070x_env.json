@@ -1,0 +1,32 @@
+{
+  "label": "3070x",
+  "measured_at": "2026-11-17T19:26:22",
+  "gpu": "NVIDIA GeForce RTX 3070",
+  "driver": "621.24",
+  "vram_total_mb": "8192",
+  "vram_used_before_mb": "2694",
+  "comfyui_version": "0.45.5",
+  "pytorch_version": "2.12.1+cu130",
+  "python_version": "3.13.12 (main, Feb 12 2026, 00:38:53) [MSC v.1944 64 bit (AMD64)]",
+  "checkpoint": "v1-5-pruned-emaonly-fp16.safetensors",
+  "negative_prompt": "text, watermark",
+  "steps": 20,
+  "cfg": 8,
+  "sampler": "euler",
+  "scheduler": "normal",
+  "resolution": "512x512",
+  "prompts": [
+    "misty mountain lake at dawn, pine forest, soft light, highly detailed landscape",
+    "still life of ceramic teapot and lemons on a wooden table, window light, oil painting",
+    "empty library interior with tall bookshelves and a spiral staircase, warm lamps"
+  ],
+  "seeds": [
+    1001,
+    1002,
+    1003,
+    1004,
+    1005
+  ],
+  "first_run_sec": 2.836,
+  "first_run_status": "ok"
+}

@@ -1,0 +1,35 @@
+{
+  "label": "5070ti",
+  "measured_at": "2026-11-18T21:03:57",
+  "gpu": "NVIDIA GeForce RTX 5070 Ti",
+  "driver": "621.24",
+  "vram_total_mb": "16303",
+  "vram_used_before_mb": "1312",
+  "comfyui_version": "0.45.5",
+  "pytorch_version": "2.12.1+cu130",
+  "python_version": "3.13.12 (main, Feb 12 2026, 00:38:53) [MSC v.1944 64 bit (AMD64)]",
+  "checkpoint": "v1-5-pruned-emaonly-fp16.safetensors",
+  "negative_prompt": "text, watermark",
+  "steps": 20,
+  "cfg": 8,
+  "sampler": "euler",
+  "scheduler": "normal",
+  "resolution": "512x512",
+  "prompts": [
+    "misty mountain lake at dawn, pine forest, soft light, highly detailed landscape",
+    "still life of ceramic teapot and lemons on a wooden table, window light, oil painting",
+    "empty library interior with tall bookshelves and a spiral staircase, warm lamps"
+  ],
+  "seeds": [
+    1001,
+    1002,
+    1003,
+    1004,
+    1005
+  ],
+  "script_sha256": "4a4c02f9a05f08ef50fa028bdd1d5c1581562846aca4714746e0178215520198",
+  "workflow_sha256": "60ab6ad6318dd34ee70eaf6cd64f40f1ecfd5327c1f99718adfd8417f2f9f255",
+  "vram_used_idle_mb": "1312",
+  "first_run_sec": 22.877,
+  "first_run_status": "ok"
+}
