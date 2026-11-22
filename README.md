@@ -38,14 +38,37 @@ ComfyUI API로 같은 워크플로를 같은 조건에서 반복 실행하고, �
 - 대표값은 중앙값. 두 조건의 차이가 3% 미만이면 "차이 없음", 3–5%는 "경계", 5% 이상이면 "달라짐"
 - 결과마다 `env.json`에 GPU·드라이버·ComfyUI·PyTorch 버전과 스크립트·워크플로의 sha256이 남습니다 (v1.1부터)
 
+## 준비물
+
+재현해 보기 전에 아래 조건을 먼저 확인해 주세요. 하나라도 빠지면 측정이 시작되지 않거나 도중에 멈춥니다.
+
+**측정 스크립트(`frostlab_bench.py`)를 쓸 때**
+
+| 항목 | 조건 |
+| --- | --- |
+| 그래픽카드 | NVIDIA 그래픽카드와 `nvidia-smi`. 시작할 때 GPU 정보를 읽기 때문에, 없으면 바로 멈춥니다 |
+| ComfyUI | 실행 중이어야 합니다. Desktop·포터블·직접 설치 어느 것이든 됩니다. 기본 주소는 `127.0.0.1:8188`이고, 다르면 `--server`로 지정합니다 |
+| 파이썬 | ComfyUI가 쓰는 파이썬으로 실행합니다(`aiohttp`가 들어 있음). 시스템 파이썬에는 `aiohttp`가 없어 실패할 수 있습니다 |
+| 모델 | 워크플로에 적힌 체크포인트 `v1-5-pruned-emaonly-fp16.safetensors`가 ComfyUI의 `models/checkpoints`에 있어야 합니다 |
+| 운영체제 | Windows에서 측정했습니다. 다른 운영체제에서는 확인하지 않았습니다 |
+
+**배치 파일(`run_*.bat`)을 쓸 때 추가 조건**
+
+- Windows용 **ComfyUI Desktop**을 전제로 합니다. 배치 파일은 `..\ComfyUI-Installs\ComfyUI\ComfyUI\.venv\Scripts\python.exe`를 부릅니다.
+- 그래서 이 저장소 폴더가 `%LOCALAPPDATA%\Comfy-Desktop` 바로 아래, `ComfyUI-Installs` 폴더 옆에 있어야 합니다. 명령창에서 `%LOCALAPPDATA%\Comfy-Desktop`으로 이동한 뒤 `git clone https://github.com/DedMoroZ-DOL/frostlab.git`을 실행하면 이 위치에 받아집니다.
+- 다른 방식으로 ComfyUI를 설치했다면 배치 파일 안의 `set PY=` 줄을 자기 ComfyUI 파이썬 경로로 바꾸거나, 아래 명령을 직접 실행하세요.
+- 측정에 쓴 환경은 ComfyUI 0.45.5(Comfy Desktop)입니다. Desktop 버전에 따라 폴더 구조가 달라질 수 있습니다.
+
 ## 재현하기
 
-1. ComfyUI를 켜고, KSampler가 1개인 기본 워크플로를 Workflow → Export (API)로 저장합니다.
-2. ComfyUI에 들어 있는 파이썬(aiohttp 포함)으로 실행합니다. 추가 설치는 필요 없습니다.
+1. ComfyUI를 켭니다. 워크플로는 저장소의 `sd15_api.json`을 그대로 씁니다. 직접 만든 워크플로를 쓰려면 KSampler가 1개인 워크플로를 Workflow → Export (API)로 저장합니다.
+2. ComfyUI의 파이썬으로 측정 스크립트를 실행합니다. ComfyUI Desktop이고 이 저장소가 위 위치에 있다면 다음과 같습니다.
 
 ```
-python frostlab_bench.py --gpu-label 5070ti --workflow sd15_api.json --out "frostlab_results/Report 001/5070ti_basic"
+..\ComfyUI-Installs\ComfyUI\ComfyUI\.venv\Scripts\python.exe frostlab_bench.py --gpu-label 5070ti --workflow sd15_api.json --out "my_results\5070ti"
 ```
+
+**`--out`은 꼭 새 폴더로 지정하세요.** 저장소에 들어 있는 배치 파일과 `run_versions`의 명령은 결과를 `frostlab_results\Report NNN` 안의 원래 결과 폴더에 저장하도록 되어 있어서, 그대로 실행하면 받아 둔 원본 측정 결과를 덮어씁니다.
 
 | 인자 | 기본값 | 설명 |
 | --- | --- | --- |
@@ -55,6 +78,8 @@ python frostlab_bench.py --gpu-label 5070ti --workflow sd15_api.json --out "fros
 | `--batches` | `1,2,4,8` | 배치 측정 크기 목록 |
 | `--width`, `--height` | `512` | 측정 해상도 (v1.2부터) |
 | `--out` | `frostlab_results` | 결과 저장 폴더 |
+
+결과 수치는 그래픽카드, 드라이버, ComfyUI·PyTorch 버전에 따라 달라집니다. 비교할 때는 결과 폴더의 `env.json`에 남은 환경을 함께 확인하세요.
 
 편마다 실제로 쓴 명령은 `run_versions/README.md`에 있습니다.
 
