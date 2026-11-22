@@ -1,4 +1,4 @@
-# Frost Lab · 주간 실증 프로젝트
+# Frost Lab · The Weekly Experiment (주간 실증 프로젝트)
 
 > 이걸 바꾸면, 뭐가 달라질까?
 
