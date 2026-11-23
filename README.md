@@ -1,10 +1,6 @@
 # Frost Lab · The Weekly Experiment (주간 실증 프로젝트)
 
-> **English summary** — Measurement code and raw results for Frost Lab, a Korean blog that runs ComfyUI image-generation experiments on a home PC, changing one variable at a time. Write-ups are in Korean; data and code are language-neutral.
->
-> - **Report 001 (RTX 3070 → RTX 5070 Ti, SD1.5 512×512):** `frostlab_results/Report 001/`. CSVs (`*_speed.csv` = 15 images, `*_batch.csv` = batch sizes), `*_env.json` (GPU, driver, ComfyUI/PyTorch versions, settings), and the script/workflow in `_code/` (the 3070 runs used script v1.0, the 5070 Ti runs v1.1; see `CHANGELOG.md` and `bench_versions/`). Tag `Report-001` marks the state used for that post.
-> - **Script:** `frostlab_bench.py` queues jobs through the ComfyUI API (default `127.0.0.1:8188`) and records time per image, it/s, and peak VRAM/power/temperature from `nvidia-smi`. Run it with ComfyUI's own Python (needs `aiohttp`). NVIDIA GPU only, tested on Windows.
-> - **Summary is the median** of 15 images (3 prompts × seeds 1001–1005). Differences under 3% are treated as "no change", 3–5% as borderline, 5%+ as "changed".
+**한국어** | [English](README.en.md)
 
 > 이걸 바꾸면, 뭐가 달라질까?
 
