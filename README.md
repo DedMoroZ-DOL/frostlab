@@ -8,6 +8,7 @@
 
 - 블로그: [Frost Lab (네이버 블로그)](https://blog.naver.com/seraph7488)
 - 작성자: DedMoroZ
+- 레딧: [u/Frostlab_DedMoroZ](https://www.reddit.com/user/Frostlab_DedMoroZ)
 
 AI와 함께 설계하고 분석하며, 실험과 판단은 사람이 합니다. 측정 스크립트는 Claude가 작성했습니다.
 
@@ -15,7 +16,7 @@ AI와 함께 설계하고 분석하며, 실험과 판단은 사람이 합니다.
 
 | 편 | 주제 | 결과 폴더 | 측정부 |
 | --- | --- | --- | --- |
-| Report 001 | [그래픽카드를 바꾸면 (RTX 3070 → RTX 5070 Ti)](https://blog.naver.com/seraph7488/224487051256) | `frostlab_results/Report 001` | v1.0 (3070), v1.1 (5070 Ti) |
+| Report 001 | [그래픽카드를 바꾸면 (RTX 3070 → RTX 5070 Ti)](https://blog.naver.com/seraph7488/224487051256) · [레딧 토론(영문)](https://www.reddit.com/r/comfyui/comments/1y3ji29/) | `frostlab_results/Report 001` | v1.0 (3070), v1.1 (5070 Ti) |
 | Report 002 | 픽셀 수만 늘리면 (준비 중) | | v1.2 |
 | Report 003 | 비율만 바꾸면 (준비 중) | | v1.2 |
 

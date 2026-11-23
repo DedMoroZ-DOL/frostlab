@@ -8,6 +8,7 @@ Measurement code and results for an experiment blog: I run generative image AI (
 
 - Blog: [Frost Lab (Naver Blog, Korean)](https://blog.naver.com/seraph7488)
 - Author: DedMoroZ
+- Reddit: [u/Frostlab_DedMoroZ](https://www.reddit.com/user/Frostlab_DedMoroZ)
 
 Experiments are designed and analyzed together with AI; running the experiments and making the calls is done by a person. The measurement script was written by Claude.
 
@@ -15,7 +16,7 @@ Experiments are designed and analyzed together with AI; running the experiments 
 
 | Report | Topic | Results folder | Script version |
 | --- | --- | --- | --- |
-| Report 001 | [Changing the GPU (RTX 3070 → RTX 5070 Ti)](https://blog.naver.com/seraph7488/224487051256) | `frostlab_results/Report 001` | v1.0 (3070), v1.1 (5070 Ti) |
+| Report 001 | [Changing the GPU (RTX 3070 → RTX 5070 Ti)](https://blog.naver.com/seraph7488/224487051256) · [Reddit discussion](https://www.reddit.com/r/comfyui/comments/1y3ji29/) | `frostlab_results/Report 001` | v1.0 (3070), v1.1 (5070 Ti) |
 | Report 002 | Raising only the pixel count (in preparation) | | v1.2 |
 | Report 003 | Changing only the aspect ratio (in preparation) | | v1.2 |
 
